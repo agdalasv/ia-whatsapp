@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Ventas - TurboPixel SV</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <!-- El widget de chat, inicialmente oculto -->
+    <div id="chat-widget-container">
+        <div id="chat-container">
+            <header id="chat-header">
+                <img src="https://turbopixelsv.com/es/assets/img/logo.png" alt="Logo TurboPixel SV" class="avatar">
+                <div class="agent-info">
+                    <h1>TurboPixel SV</h1>
+                    <p>Asistente de Ventas</p>
+                </div>
+                <button id="close-chat-button" aria-label="Cerrar chat">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </header>
+            <main id="chat-messages"></main>
+            <footer id="chat-input-container">
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." autocomplete="off" aria-label="Escribe tu mensaje">
+                    <button type="submit" id="send-button" aria-label="Enviar mensaje">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </form>
+            </footer>
+        </div>
+    </div>
+
+    <!-- El botón lanzador (la "ruedita") -->
+    <button id="chat-launcher" aria-label="Abrir chat">
+        <span class="material-symbols-outlined chat-icon">chat</span>
+        <span class="material-symbols-outlined close-icon">close</span>
+    </button>
+    
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/genai": "https://esm.sh/@google/genai@^0.14.0"
+          }
+        }
+    </script>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
